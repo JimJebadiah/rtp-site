@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu&display=swap');
+
+@button-padding: 0 20px 0 20px;
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.modal {
+	display: flex;
+	align-content: center;
+	border: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	font-size: 50px;
+	transform: scale(1);
+	padding: 20px 20px 10px 20px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+	transition: background-color 0.1s;
+	font-family: 'Luckiest Guy', cursive;
+}
+

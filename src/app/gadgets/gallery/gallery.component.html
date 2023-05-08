@@ -1,0 +1,11 @@
+<div class="gallery-container">
+  <ngx-slick-carousel class="carousel"
+                      #slickModal="slick-carousel"
+                      [config]="slideConfig"
+                      (init)="init($event)"
+                      (afterChange)="change($event)">
+    <div ngxSlickItem *ngFor="let slide of slides; let i = index" class="slide">
+      <img src="{{ slide.img }}" alt="" width="50%" [class.current]="i === currentSlideFunc()">
+    </div>
+  </ngx-slick-carousel>
+</div>

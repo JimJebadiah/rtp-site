@@ -1,0 +1,12 @@
+<div id="navigation-bar">
+    <div id="logo" (click)="navigateHome()">
+        <img src="https://returnofparadise.com/images/image_2.png">
+    </div>
+    <div id="navigation-container">
+        <rtp-navigation-bar-button
+            *ngFor="let button of navigationItems"
+            [navigationLink]="button.link"
+            [text]="button.text"
+        ></rtp-navigation-bar-button>
+    </div>
+</div>
