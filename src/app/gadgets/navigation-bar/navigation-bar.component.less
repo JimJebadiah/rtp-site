@@ -1,0 +1,46 @@
+@import "../../common.less";
+
+#navigation-bar {
+    background-color: black;
+    width: 100vw;
+    height: 80px;
+
+    // Send to top and left
+    top: 0;
+    left: 0;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+  @media screen and (max-width: @mobile-max-width) {
+    height: 50px;
+  }
+}
+
+#logo {
+    margin-left: 20px;
+    opacity: 1;
+    transition: opacity 0.25s ease-out 100ms;
+
+  img {
+    @media screen and (max-width: @mobile-max-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+#logo:hover {
+    opacity: 0.8;
+}
+
+#navigation-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  @media screen and (max-width: @mobile-max-width) {
+    display: none;
+  }
+}
