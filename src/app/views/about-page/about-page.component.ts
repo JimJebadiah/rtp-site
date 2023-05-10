@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {AssetService} from "../../services/asset-service";
 
 @Component({
-  selector: 'app-privacy-policy-page',
-  templateUrl: './privacy-policy-page.component.html',
-  styleUrls: ['./privacy-policy-page.component.less']
+  selector: 'app-about-page',
+  templateUrl: './about-page.component.html',
+  styleUrls: ['./about-page.component.less']
 })
-export class PrivacyPolicyPageComponent implements OnInit{
+export class AboutPageComponent implements OnInit {
   constructor(private readonly assetService: AssetService) {
   }
 

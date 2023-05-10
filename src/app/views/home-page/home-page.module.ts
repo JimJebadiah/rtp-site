@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HomePageComponent } from './home-page.component';
 import {ImageGalleryModule} from 'src/app/gadgets/gallery/gallery.module';
 import {MatIconModule} from "@angular/material/icon";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import {MatIconModule} from "@angular/material/icon";
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     ImageGalleryModule,
     MatIconModule,
   ],

@@ -42,9 +42,13 @@
   }
 }
 
-::ng-deep .slick-prev::before, ::ng-deep .slick-next::before {
+::ng-deep .slick-prev, ::ng-deep .slick-prev::before, ::ng-deep .slick-next, ::ng-deep .slick-next::before {
   font-size: 40px;
   color: black;
+  width: 40px !important;
+  height: 40px !important;
+
+  overflow: hidden;
 }
 
 .gallery-container {

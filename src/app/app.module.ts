@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { NavigationBarModule } from './gadgets/navigation-bar/navigation-bar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterBarModule } from './gadgets/footer-bar/footer-bar.module';
-import {HomePageModule} from "./views/home-page/home-page.module";
 import {HttpClientModule} from "@angular/common/http";
-import { PrivacyPolicyPageComponent } from './views/privacy-policy-page/privacy-policy-page.component';
+import {APP_BASE_HREF, CommonModule, PlatformLocation} from "@angular/common";
+import {ConstructionPageModule} from "./views/construction-page/construction-page.module";
+import {PrivacyPolicyPageModule} from "./views/privacy-policy-page/privacy-policy-page.module";
+import {AboutPageModule} from "./views/about-page/about-page.module";
+import {HomePageModule} from "./views/home-page/home-page.module";
 
 @NgModule({
   declarations: [
@@ -16,13 +19,22 @@ import { PrivacyPolicyPageComponent } from './views/privacy-policy-page/privacy-
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     NavigationBarModule,
     FooterBarModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ConstructionPageModule,
+    PrivacyPolicyPageModule,
+    AboutPageModule,
+    HomePageModule,
   ],
-  providers: [],
+  providers: [{
+    provide: APP_BASE_HREF,
+    useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),
+    deps: [PlatformLocation]
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChildren} from '@angular/core';
 import {SlickItemDirective} from "ngx-slick-carousel";
 import {AssetService} from "../../services/asset-service";
 import * as $ from "jquery";
@@ -8,14 +8,14 @@ import * as $ from "jquery";
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.less']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements AfterViewInit {
 
   @ViewChildren(SlickItemDirective)
   items: ReadonlyArray<SlickItemDirective> = [];
 
   images: ReadonlyArray<string> = [];
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.assetSvc.loadGalleryImages().subscribe((img) => {
       this.images = img.images;
       this.slides = this.images.map((i) => {return {img: i}});
@@ -33,6 +33,7 @@ export class GalleryComponent implements OnInit {
 
   init(event: any) {
     this.setCurrentSlide(event.slick.currentSlide);
+    this.ngAfterViewInit();
   }
 
   change(event: any) {
