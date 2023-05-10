@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
   {path: CONTACT_PATH, component: ConstructionPageComponent},
   {path: WIKI_PATH, component: ConstructionPageComponent},
-  {path: '**', component: NotFoundPageComponent},
   {path: '', redirectTo: HOME_PATH, pathMatch: "full"},
+  {path: '**', component: NotFoundPageComponent},
 ];
 
 @NgModule({
