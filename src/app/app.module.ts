@@ -12,6 +12,7 @@ import {ConstructionPageModule} from "./views/construction-page/construction-pag
 import {PrivacyPolicyPageModule} from "./views/privacy-policy-page/privacy-policy-page.module";
 import {AboutPageModule} from "./views/about-page/about-page.module";
 import {HomePageModule} from "./views/home-page/home-page.module";
+import {NotFoundPageModule} from "./views/not-found-page/not-found-page.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {HomePageModule} from "./views/home-page/home-page.module";
     PrivacyPolicyPageModule,
     AboutPageModule,
     HomePageModule,
+    NotFoundPageModule,
   ],
   providers: [{
     provide: APP_BASE_HREF,
