@@ -1,20 +1,23 @@
 @import "../../common.less";
 
 #navigation-bar {
-    background-color: black;
-    width: 100vw;
-    height: 80px;
+  background-color: black;
+  width: 100vw;
+  min-height: 80px;
+  max-height: 80px;
 
-    // Send to top and left
-    top: 0;
-    left: 0;
-    margin: auto;
+  // Send to top and left
+  top: 0;
+  left: 0;
+  margin: auto;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
   @media screen and (max-width: @mobile-max-width) {
-    height: 50px;
+    min-height: 50px;
+    max-height: unset;
+    justify-content: space-between;
   }
 }
 
@@ -35,12 +38,22 @@
     opacity: 0.8;
 }
 
-#navigation-container {
+#navigation-container-desktop {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.mobile {
+  display: none !important;
 
   @media screen and (max-width: @mobile-max-width) {
-    display: none;
+    display: unset !important;
+  }
+}
+
+.desktop {
+  @media screen and (max-width: @mobile-max-width) {
+    display: none !important;
   }
 }

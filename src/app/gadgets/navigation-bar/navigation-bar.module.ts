@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NavigationBarComponent } from './navigation-bar.component';
 import { NavigationBarButtonModule } from './navigation-bar-button/navigation-bar-button.module';
 import {NgOptimizedImage} from "@angular/common";
+import {NavigationBarMobileModule} from "./navigation-bar-mobile/navigation-bar-mobile.module";
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {NgOptimizedImage} from "@angular/common";
     imports: [
         BrowserModule,
         NavigationBarButtonModule,
+        NavigationBarMobileModule,
         NgOptimizedImage,
     ],
   providers: [],

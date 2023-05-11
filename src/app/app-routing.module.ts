@@ -6,12 +6,13 @@ import { ConstructionPageComponent } from './views/construction-page/constructio
 import {PrivacyPolicyPageComponent} from "./views/privacy-policy-page/privacy-policy-page.component";
 import {AboutPageComponent} from "./views/about-page/about-page.component";
 import {NotFoundPageComponent} from "./views/not-found-page/not-found-page.component";
+import {DownloadPageComponent} from "./views/download-page/download-page.component";
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
   {path: ABOUT_PATH, component: AboutPageComponent},
   {path: NEWS_PATH, component: ConstructionPageComponent},
-  {path: DOWNLOAD_PATH, component: ConstructionPageComponent},
+  {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
   {path: CONTACT_PATH, component: ConstructionPageComponent},
   {path: WIKI_PATH, component: ConstructionPageComponent},

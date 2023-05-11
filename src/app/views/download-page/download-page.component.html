@@ -1,0 +1,15 @@
+<div id="download-container" [ngStyle]="{'background-image': backgroundImage}">
+  <div class="text-container">
+    <div class="text-modal modal">
+      <h1>Downloads</h1>
+      <p>We recommend the latest version</p>
+      <rtp-download-widget
+        *ngFor="let data of downloads; let i = index"
+        [version]="data.version"
+        [status]="i != 0 ? 'Archived' : 'Latest'"
+        [data]="data.platforms"
+      ></rtp-download-widget>
+    </div>
+  </div>
+</div>
+

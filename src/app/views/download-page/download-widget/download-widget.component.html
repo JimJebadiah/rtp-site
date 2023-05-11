@@ -1,0 +1,15 @@
+<div class="download-widget-container">
+  <mat-expansion-panel [expanded]="status === 'Latest'">
+    <mat-expansion-panel-header>
+      <div class="header-container">
+        <span class="version">Version {{version}}</span>
+        <span class="status">{{status}}</span>
+      </div>
+    </mat-expansion-panel-header>
+    <div class="button-container">
+      <button mat-button *ngFor="let d of data" (click)="navigateToLink(d.link)" class="platform-button">
+        {{d.platform}} {{hasNoLink(d.link) ? '(Coming Soon)' : ''}}
+      </button>
+    </div>
+  </mat-expansion-panel>
+</div>

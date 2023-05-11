@@ -1,0 +1,12 @@
+<button class="toggle-button" mat-button (click)="toggleMenu($event)">
+  <mat-icon class="material-symbols-outlined">menu</mat-icon>
+</button>
+<mat-expansion-panel class="nav-menu-container" hideToggle [expanded]="showExpanded">
+  <div class="button-container">
+    <rtp-navigation-bar-button
+      *ngFor="let button of navigationItems"
+      [navigationLink]="button.link"
+      [text]="button.text"
+    ></rtp-navigation-bar-button>
+  </div>
+</mat-expansion-panel>

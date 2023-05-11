@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {NotFoundPageComponent} from "./not-found-page.component";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 
@@ -9,7 +10,8 @@ import {NotFoundPageComponent} from "./not-found-page.component";
     NotFoundPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatExpansionModule
   ],
   exports: [
     NotFoundPageComponent

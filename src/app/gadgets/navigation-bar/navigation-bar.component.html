@@ -2,11 +2,14 @@
     <div id="logo" (click)="navigateHome()">
         <img src="assets/images/rtp_logo.png">
     </div>
-    <div id="navigation-container">
+    <div id="navigation-container-desktop" class="desktop">
         <rtp-navigation-bar-button
             *ngFor="let button of navigationItems"
             [navigationLink]="button.link"
             [text]="button.text"
         ></rtp-navigation-bar-button>
+    </div>
+    <div id="navigation-container-mobile" class="mobile">
+      <rtp-navigation-bar-mobile [navigationItems]="navigationItems"></rtp-navigation-bar-mobile>
     </div>
 </div>

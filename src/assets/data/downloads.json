@@ -1,0 +1,10 @@
+{
+  "downloads": [
+    {"version":  "template", "platforms": [{"platform": "Windows", "link": "LINK HERE"}, {"platform":  "Android", "link": "LINK HERE"}]},
+    {"version":  "0.0.3", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1R6G7TxwV3DPtWsMsmiLWeltJXN0WbNPU/view"}]},
+    {"version":  "0.0.4", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/17z-ZCBYFadh9G-VZYsV4ajFDVrBfcjxf/view"}]},
+    {"version":  "0.0.5", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1gjYDPdZ_B8htK7lxrygtr7e14YMhgPs2/view"}]},
+    {"version":  "0.0.6", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1kvl9IJ4WZnX1uS_034PPaHc_3ffTpXIk/view"}]},
+    {"version":  "0.0.7", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1xwAGL4xeKn7Y6R7ojhTLYNiiQp6D6x9k/view"}, {"platform":  "Android", "link":  ""}]}
+  ]
+}
