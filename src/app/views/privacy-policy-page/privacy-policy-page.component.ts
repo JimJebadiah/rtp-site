@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AssetService} from "../../services/asset-service";
 
 @Component({
-  selector: 'app-privacy-policy-page',
+  selector: 'rtp-privacy-policy-page',
   templateUrl: './privacy-policy-page.component.html',
   styleUrls: ['./privacy-policy-page.component.less']
 })

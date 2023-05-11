@@ -33,8 +33,12 @@ export class RoutingService {
         this.navigateToPage(CONTACT_PATH);
     }
 
-    navigateToWikiPage() {
-        this.navigateToPage(WIKI_PATH);
+    navigateToNewAdditionsPage() {
+        this.navigateToPage(NEW_ADDITIONS_PATH);
+    }
+
+    navigateTo404() {
+      this.navigateToPage(NOT_FOUND_PATH);
     }
 
     navigateToPage(urlSegment: string, additionalSegments: ReadonlyArray<string> = []) {
@@ -45,7 +49,12 @@ export class RoutingService {
 export const HOME_PATH = 'home';
 export const ABOUT_PATH = 'about';
 export const NEWS_PATH = 'news';
+export const NEW_ADDITIONS_PATH = 'new-additions';
 export const DOWNLOAD_PATH = 'downloads';
-export const POLICY_PATH = 'privacyPolicy';
+export const POLICY_PATH = 'privacy-policy';
 export const CONTACT_PATH = 'contact';
-export const WIKI_PATH = 'wiki';
+export const NOT_FOUND_PATH = '404';
+
+export const PINATA_PATH = 'pinata'
+
+export const PINATA_PARAM = 'pinataName'

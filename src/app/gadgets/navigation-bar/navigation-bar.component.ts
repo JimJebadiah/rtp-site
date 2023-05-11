@@ -1,5 +1,13 @@
 import { Component } from '@angular/core';
-import { ABOUT_PATH, CONTACT_PATH, DOWNLOAD_PATH, NEWS_PATH, POLICY_PATH, RoutingService, WIKI_PATH } from 'src/app/services/routing-service';
+import {
+  ABOUT_PATH,
+  CONTACT_PATH,
+  DOWNLOAD_PATH,
+  NEW_ADDITIONS_PATH,
+  NEWS_PATH,
+  POLICY_PATH,
+  RoutingService,
+} from 'src/app/services/routing-service';
 
 @Component({
   selector: 'rtp-navigation-bar',
@@ -35,8 +43,8 @@ export class NavigationBarComponent {
       text: 'Contact',
     },
     {
-      link: WIKI_PATH,
-      text: 'Wiki',
+      link: NEW_ADDITIONS_PATH,
+      text: 'New Additions',
     },
   ];
 

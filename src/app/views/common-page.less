@@ -9,7 +9,8 @@
 
   .text-modal {
     width: 75%;
-    height: 90%;
+    min-height: 30%;
+    max-height: 90%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -17,6 +18,12 @@
     overflow: scroll;
     overflow-x: hidden;
     line-height: 30px;
+    padding: 40px 10px 40px 10px;
+
+    @media screen and (max-width: @mobile-max-width) {
+      width: 90%;
+      max-height: 90%;
+    }
 
     p, a {
       font-family: Ubuntu, serif;
@@ -39,7 +46,6 @@
     h1, h2 {
       font-family: 'Luckiest Guy', cursive;
       font-size: 60px;
-      padding-top: 20px;
       padding-bottom: 20px;
       line-height: 65px;
 

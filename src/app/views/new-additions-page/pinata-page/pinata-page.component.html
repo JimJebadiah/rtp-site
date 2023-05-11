@@ -1,0 +1,30 @@
+<div class="pinata-container">
+  <div class="header-container">
+    <h1 class="name">{{pinata?.name}}</h1>
+    <img src="{{pinata?.image}}">
+    <p class="animal">Animal: {{pinata?.animal}}</p>
+    <p class="food">Food: {{pinata?.food}}</p>
+    <p class="level">Level: {{pinata?.level}}</p>
+    <p class="attack">Attack: {{pinata?.attack}}</p>
+  </div>
+  <div class="info-container">
+    <div *ngIf="reqs?.appear" class="appearance">
+      <span>Appearance Requirements:</span>
+      <ul>
+        <li *ngFor="let req of reqs.appear">{{req}}</li>
+      </ul>
+    </div>
+    <div *ngIf="reqs?.resident" class="appearance">
+      <span>Residence Requirements:</span>
+      <ul>
+        <li *ngFor="let req of reqs.resident">{{req}}</li>
+      </ul>
+    </div>
+    <div *ngIf="reqs?.romance" class="appearance">
+      <span>Romance Requirements:</span>
+      <ul>
+        <li *ngFor="let req of reqs.romance">{{req}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

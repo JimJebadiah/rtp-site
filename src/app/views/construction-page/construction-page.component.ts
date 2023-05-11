@@ -3,7 +3,7 @@ import { RoutingService } from 'src/app/services/routing-service';
 import {AssetService} from "../../services/asset-service";
 
 @Component({
-  selector: 'app-construction-page',
+  selector: 'rtp-construction-page',
   templateUrl: './construction-page.component.html',
   styleUrls: ['./construction-page.component.less']
 })

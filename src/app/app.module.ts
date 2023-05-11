@@ -8,31 +8,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterBarModule } from './gadgets/footer-bar/footer-bar.module';
 import {HttpClientModule} from "@angular/common/http";
 import {APP_BASE_HREF, CommonModule, PlatformLocation} from "@angular/common";
-import {ConstructionPageModule} from "./views/construction-page/construction-page.module";
-import {PrivacyPolicyPageModule} from "./views/privacy-policy-page/privacy-policy-page.module";
-import {AboutPageModule} from "./views/about-page/about-page.module";
-import {HomePageModule} from "./views/home-page/home-page.module";
-import {NotFoundPageModule} from "./views/not-found-page/not-found-page.module";
-import {DownloadPageModule} from "./views/download-page/download-page.module";
+import {ViewsModule} from "./views/views.module";
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    // ANGULAR
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    NavigationBarModule,
-    FooterBarModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ConstructionPageModule,
-    PrivacyPolicyPageModule,
-    AboutPageModule,
-    HomePageModule,
-    NotFoundPageModule,
-    DownloadPageModule,
+
+    // COMPONENTS
+    NavigationBarModule,
+    FooterBarModule,
+    ViewsModule
   ],
   providers: [{
     provide: APP_BASE_HREF,

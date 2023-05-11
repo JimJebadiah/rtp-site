@@ -37,7 +37,14 @@ export class AssetService {
         }
         return source.downloads;
       }),
-    )
+    );
+  }
+
+  loadPinata(): Observable<ReadonlyArray<Pinata>> {
+    const path = this.constructAssetPath('assets/data/pinata.json');
+    return this.loadAsset(path).pipe(
+      map((obj) => (obj as PinataSource).pinata),
+    );
   }
 
   loadAsset(path: string): Observable<Object> {
@@ -61,4 +68,30 @@ export interface DownloadObject {
     platform: string,
     link: string,
   }>
+}
+
+export interface PinataSource {
+  pinata: ReadonlyArray<Pinata>;
+}
+
+export type WakingHours = 'diurnal' | 'nocturnal';
+
+export interface Pinata {
+  name: string;
+  animal: string,
+  food: string,
+  level: number;
+  attack: string;
+  image: string;
+  slideLink: string;
+  wakingHours: string;
+  requirements: Requirements;
+}
+
+export interface Requirements {
+  appear: ReadonlyArray<string> | undefined;
+  capture: ReadonlyArray<string> | undefined;
+  resident: ReadonlyArray<string> | undefined;
+  romance: ReadonlyArray<string>;
+  variants: ReadonlyArray<{[color: string]: string}>;
 }

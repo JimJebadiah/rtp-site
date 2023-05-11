@@ -1,0 +1,52 @@
+@import '../../../common.less';
+
+p, a {
+  font-family: Ubuntu, serif;
+  font-size: 20px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: @mobile-max-width) {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+h1, h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 65px;
+
+  @media screen and (max-width: @mobile-max-width) {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+}
+
+button {
+  background-color: #3898EC;
+  min-width: 80%;
+  height: 80px !important;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: @mobile-max-width) {
+    min-width: unset;
+    width: 80%;
+  }
+}
+
+

@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {AssetService} from "../../services/asset-service";
 
 @Component({
-  selector: 'rtp-about-page',
-  templateUrl: './about-page.component.html',
-  styleUrls: ['./about-page.component.less']
+  selector: 'rtp-new-additions-page',
+  templateUrl: './new-additions-page.component.html',
+  styleUrls: ['./new-additions-page.component.less']
 })
-export class AboutPageComponent implements OnInit {
+export class NewAdditionsPageComponent implements OnInit {
   constructor(private readonly assetService: AssetService) {
   }
 

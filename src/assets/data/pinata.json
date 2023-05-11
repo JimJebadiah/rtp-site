@@ -1,0 +1,38 @@
+{
+  "pinata": [
+    {
+      "name": "Sweetah",
+      "animal": "Cheetah",
+      "food": "Sweet",
+      "level": 6,
+      "attack": "speedometer",
+      "image": "assets/images/pinata/image/sweetah.png",
+      "slideLink": "https://docs.google.com/presentation/d/1Qu-QqI9SLaIaCRtTg2VvvE1yNMbdDoAZ4nMCJXaItgI/edit#slide=id.ge51ce7486318100_68",
+      "wakingHours": "diurnal",
+      "requirements": {
+        "appear": [
+          "Be Level 20 in the Dessert Desert"
+        ],
+        "capture": [
+          "Put a chili on the trap"
+        ],
+        "resident": [
+          "Has eaten 2 Chochtritches",
+          "Has eaten 1 Pretztail",
+          "Have 10 pinometers of desert grass"
+        ],
+        "romance": [
+          "Has ran a distance of 35 pinometers in the garden",
+          "Has eaten 1 doenut",
+          "Has eaten 2 parmadillos",
+          "Have a sweetah house in the garden"
+        ],
+        "variants": {
+          "yellow": "Has eaten a sunflower",
+          "blue": "Has eaten one honeyberry",
+          "red": "Has eaten one poppy"
+        }
+      }
+    }
+  ]
+}
