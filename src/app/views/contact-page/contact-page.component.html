@@ -1,0 +1,32 @@
+<div id="contact-container" [ngStyle]="{'background-image': backgroundImage}">
+  <div class="text-container">
+    <div class="text-modal modal" *ngIf="contact">
+      <h1>Contact Us</h1>
+      <form class="contact-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="name" name="name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [(ngModel)]="email" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+          <mat-error>Email is invalid</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Message</mat-label>
+          <textarea matInput [(ngModel)]="message" name="message" required></textarea>
+        </mat-form-field>
+      <!-- your other form fields go here -->
+        <button mat-button type="submit" (click)="sendEmail()">
+          <span>Send</span>
+        </button>
+      </form>
+    </div>
+    <div class="modal confirmation" *ngIf="!contact">
+      <h1>Email Sent!</h1>
+      <p>We'll get back to you soon!</p>
+    </div>
+  </div>
+</div>

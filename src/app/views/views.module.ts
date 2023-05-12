@@ -8,6 +8,7 @@ import {NewAdditionsPageModule} from "./new-additions-page/new-additions-page.mo
 import {NotFoundPageModule} from "./not-found-page/not-found-page.module";
 import {PrivacyPolicyPageModule} from "./privacy-policy-page/privacy-policy-page.module";
 import {PinataPageModule} from "./new-additions-page/pinata-page/pinata-page.module";
+import {ContactPageModule} from "./contact-page/contact-page.module";
 
 
 
@@ -21,7 +22,8 @@ import {PinataPageModule} from "./new-additions-page/pinata-page/pinata-page.mod
     HomePageModule,
     NewAdditionsPageModule,
     NotFoundPageModule,
-    PrivacyPolicyPageModule
+    PrivacyPolicyPageModule,
+    ContactPageModule
   ]
 })
 export class ViewsModule { }

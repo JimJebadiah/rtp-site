@@ -1,22 +1,22 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { RoutingService } from 'src/app/services/routing-service';
 import {AssetService} from "../../services/asset-service";
+import {AbstractPage} from "../abstract-page";
 
 @Component({
   selector: 'rtp-construction-page',
   templateUrl: './construction-page.component.html',
   styleUrls: ['./construction-page.component.less']
 })
-export class ConstructionPageComponent implements OnInit {
+export class ConstructionPageComponent extends AbstractPage  implements OnInit {
 
-  constructor(private readonly assetSvc: AssetService) {
+  constructor(assetService: AssetService) {
+    super(assetService);
   }
 
-  backgroundImage: string = '';
-
-  ngOnInit(): void {
+  override ngOnInit(): void {
+    super.ngOnInit();
     this.quote = this.getQuote();
-    this.backgroundImage = `url(${this.assetSvc.constructAssetPath('assets/images/candy.png')})`;
   }
 
   quote: string = '';

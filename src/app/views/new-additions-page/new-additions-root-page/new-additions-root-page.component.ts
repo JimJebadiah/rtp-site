@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NewAdditionsRootPageComponent {
   goToSlides() {
-    window.open("https://docs.google.com/presentation/d/1Qu-QqI9SLaIaCRtTg2VvvE1yNMbdDoAZ4nMCJXaItgI/edit#slide=id.ge51ce7486318100_68");
+    window.open("https://docs.google.com/presentation/d/1Qu-QqI9SLaIaCRtTg2VvvE1yNMbdDoAZ4nMCJXaItgI/edit?pli=1#slide=id.p");
   }
 
   goToHomesSlides() {
-    window.open("https://docs.google.com/presentation/d/1UhK7i-MyN15iqnCOqJq3BHtN4DbNrxlo7o5RfLz9zaU/edit#slide=id.g7ed22e581e_0_268");
+    window.open("https://docs.google.com/presentation/d/1UhK7i-MyN15iqnCOqJq3BHtN4DbNrxlo7o5RfLz9zaU/edit#slide=id.g7ed22e581e_0_54");
   }
 }

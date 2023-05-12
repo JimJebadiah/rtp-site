@@ -20,6 +20,7 @@ import {PinataPageComponent} from "./views/new-additions-page/pinata-page/pinata
 import {
   NewAdditionsRootPageComponent
 } from "./views/new-additions-page/new-additions-root-page/new-additions-root-page.component";
+import {ContactPageComponent} from "./views/contact-page/contact-page.component";
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
@@ -27,7 +28,7 @@ const routes: Routes = [
   {path: NEWS_PATH, component: ConstructionPageComponent},
   {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
-  {path: CONTACT_PATH, component: ConstructionPageComponent},
+  {path: CONTACT_PATH, component: ContactPageComponent},
   {path: NEW_ADDITIONS_PATH, component: NewAdditionsPageComponent, children: [
     {path: `${PINATA_PATH}/:${PINATA_PARAM}`, component: PinataPageComponent},
     {path: '', component: NewAdditionsRootPageComponent}

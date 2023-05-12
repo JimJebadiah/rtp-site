@@ -1,0 +1,75 @@
+@import "../common-page.less";
+
+@accentBlue: #3898EC;
+
+#contact-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+}
+
+button {
+  background-color: @accentBlue;
+  width: 40%;
+  height: 60px !important;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+
+  @media screen and (max-width: @mobile-max-width) {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+::ng-deep .mdc-line-ripple::after {
+  border-bottom-color: @accentBlue !important;
+}
+
+input, textarea {
+  caret-color: white !important;
+}
+
+textarea {
+  height: 300px !important;
+}
+
+::ng-deep .mdc-floating-label--float-above {
+  color: @accentBlue !important;
+}
+
+::ng-deep .blue-background {
+  text-align: center;
+  --mdc-snackbar-supporting-text-color: white;
+  --mdc-snackbar-container-color: #3898EC;
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 40px 20px;
+
+  h1 {
+    font-family: 'Luckiest Guy', cursive !important;
+    font-size: 60px;
+  }
+
+  p {
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 20px;
+  }
+}
