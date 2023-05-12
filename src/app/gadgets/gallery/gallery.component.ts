@@ -14,6 +14,7 @@ export class GalleryComponent implements AfterViewInit {
   items: ReadonlyArray<SlickItemDirective> = [];
 
   images: ReadonlyArray<string> = [];
+  blur: boolean = true;
 
   ngAfterViewInit() {
     this.assetSvc.loadGalleryImages().subscribe((img) => {
@@ -37,7 +38,7 @@ export class GalleryComponent implements AfterViewInit {
   }
 
   change(event: any) {
-    this.setCurrentSlide(event.currentSlide );
+    this.setCurrentSlide(event.currentSlide);
   }
 
   private setCurrentSlide(i: number) {
@@ -48,5 +49,11 @@ export class GalleryComponent implements AfterViewInit {
   currentSlideFunc() {
     console.log(this.currentSlide);
     return this.currentSlide;
+  }
+
+  isCurrentSlide(i: number) {
+    console.log(this.items);
+    const after = this.currentSlide + this.slides.length === i;
+    return after || i === this.currentSlide;
   }
 }
