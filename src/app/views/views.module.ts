@@ -7,13 +7,13 @@ import {HomePageModule} from "./home-page/home-page.module";
 import {NewAdditionsPageModule} from "./new-additions-page/new-additions-page.module";
 import {NotFoundPageModule} from "./not-found-page/not-found-page.module";
 import {PrivacyPolicyPageModule} from "./privacy-policy-page/privacy-policy-page.module";
-import {PinataPageModule} from "./new-additions-page/pinata-page/pinata-page.module";
 import {ContactPageModule} from "./contact-page/contact-page.module";
+import {NewsPageModule} from "./news-page/news-page.module";
+import {ArticlePageModule} from "./article-page/article-page.module";
 
 
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     AboutPageModule,
@@ -23,7 +23,9 @@ import {ContactPageModule} from "./contact-page/contact-page.module";
     NewAdditionsPageModule,
     NotFoundPageModule,
     PrivacyPolicyPageModule,
-    ContactPageModule
+    ContactPageModule,
+    NewsPageModule,
+    ArticlePageModule
   ]
 })
 export class ViewsModule { }

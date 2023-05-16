@@ -1,0 +1,26 @@
+<div id="article-container" [ngStyle]="{'background-image': backgroundImage}">
+  <div class="text-container">
+    <div class="text-modal modal">
+      <ng-container *ngFor="let text of article?.textContent">
+        <ng-container *ngIf="isImage(text); else second">
+          <img src="{{extractSourceImage(text)}}">
+        </ng-container>
+        <ng-template #second>
+          <ng-container *ngIf="isVideo(text); else third">
+            <iframe
+              [src]="extractSourceVideo(text)"
+              width="560"
+              height="315"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          </ng-container>
+        </ng-template>
+        <ng-template #third>
+          <p>{{text}}</p>
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+</div>

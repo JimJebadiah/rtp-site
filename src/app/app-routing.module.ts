@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import {
-  ABOUT_PATH,
+  ABOUT_PATH, ARTICLE_PATH,
   CONTACT_PATH,
   DOWNLOAD_PATH,
   HOME_PATH,
@@ -10,7 +10,6 @@ import {
   NEWS_PATH, PINATA_PARAM, PINATA_PATH,
   POLICY_PATH
 } from './services/routing-service';
-import { ConstructionPageComponent } from './views/construction-page/construction-page.component';
 import {PrivacyPolicyPageComponent} from "./views/privacy-policy-page/privacy-policy-page.component";
 import {AboutPageComponent} from "./views/about-page/about-page.component";
 import {NotFoundPageComponent} from "./views/not-found-page/not-found-page.component";
@@ -21,11 +20,14 @@ import {
   NewAdditionsRootPageComponent
 } from "./views/new-additions-page/new-additions-root-page/new-additions-root-page.component";
 import {ContactPageComponent} from "./views/contact-page/contact-page.component";
+import {NewsPageComponent} from "./views/news-page/news-page.component";
+import {ArticlePageComponent} from "./views/article-page/article-page.component";
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
   {path: ABOUT_PATH, component: AboutPageComponent},
-  {path: NEWS_PATH, component: ConstructionPageComponent},
+  {path: NEWS_PATH, component: NewsPageComponent},
+  {path: ARTICLE_PATH, component: ArticlePageComponent},
   {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
   {path: CONTACT_PATH, component: ContactPageComponent},

@@ -49,6 +49,7 @@ export class RoutingService {
 export const HOME_PATH = 'home';
 export const ABOUT_PATH = 'about';
 export const NEWS_PATH = 'news';
+export const ARTICLE_PATH = 'article';
 export const NEW_ADDITIONS_PATH = 'new-additions';
 export const DOWNLOAD_PATH = 'downloads';
 export const POLICY_PATH = 'privacy-policy';

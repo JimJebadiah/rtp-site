@@ -1,0 +1,10 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Sample Article",
+      "date": "5/15/23",
+      "thumbnail": "assets/images/gallery/train.png"
+    }
+  ]
+}

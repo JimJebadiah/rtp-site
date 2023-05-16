@@ -1,0 +1,10 @@
+<div id="news-container" [ngStyle]="{'background-image': backgroundImage}">
+  <div class="text-container">
+    <div class="text-modal modal">
+      <ng-container *ngFor="let ref of articles">
+        <rtp-news-article [articleRef]="ref"></rtp-news-article>
+      </ng-container>
+    </div>
+  </div>
+</div>
+

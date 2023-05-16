@@ -1,7 +1,6 @@
-import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, ViewChildren} from '@angular/core';
 import {SlickItemDirective} from "ngx-slick-carousel";
 import {AssetService} from "../../services/asset-service";
-import * as $ from "jquery";
 
 @Component({
   selector: 'rtp-gallery',

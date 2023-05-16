@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "title": "Sample Article",
+  "date": "5/15/23",
+  "textContent": [
+    "<IMAGE> : /assets/images/gallery/train.png",
+    "This is a paragraph",
+    "This is the next paragraph",
+    "Below is an image injected in the middle",
+    "<IMAGE> : /assets/images/gallery/lighthouse.png",
+    "This is a third paragraph",
+    "Below is a video injected in the middle",
+    "<VIDEO> : https://www.youtube.com/embed/ixgKdRyKXwk",
+    "This is the end of the article"
+  ]
+}

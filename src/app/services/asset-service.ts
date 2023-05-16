@@ -2,6 +2,7 @@ import {Inject, Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {APP_BASE_HREF} from "@angular/common";
 import {map, Observable} from "rxjs";
+import {Article, ArticleRef} from "./news-service";
 
 
 @Injectable({
@@ -44,6 +45,20 @@ export class AssetService {
     const path = this.constructAssetPath('assets/data/pinata.json');
     return this.loadAsset(path).pipe(
       map((obj) => (obj as PinataSource).pinata),
+    );
+  }
+
+  loadArticles(): Observable<ReadonlyArray<ArticleRef>> {
+    const path = this.constructAssetPath('assets/data/news-articles/atricle-index.json');
+    return this.loadAsset(path).pipe(
+      map((obj) => (obj as {articles: ReadonlyArray<ArticleRef>}).articles),
+    );
+  }
+
+  loadArticle(id: number): Observable<Article> {
+    const path = this.constructAssetPath(`assets/data/news-articles/articles/news-article-${id}.json`);
+    return this.loadAsset(path).pipe(
+      map((obj) => (obj as Article)),
     );
   }
 
