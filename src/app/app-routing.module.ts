@@ -27,11 +27,11 @@ import {ConstructionPageComponent} from "./views/construction-page/construction-
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
   {path: ABOUT_PATH, component: AboutPageComponent},
-  {path: NEWS_PATH, component: ConstructionPageComponent},
+  {path: NEWS_PATH, component: NewsPageComponent},
   {path: ARTICLE_PATH, component: ArticlePageComponent},
   {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
-  {path: CONTACT_PATH, component: ConstructionPageComponent},
+  {path: CONTACT_PATH, component: ContactPageComponent},
   {path: NEW_ADDITIONS_PATH, component: NewAdditionsPageComponent, children: [
     {path: `${PINATA_PATH}/:${PINATA_PARAM}`, component: PinataPageComponent},
     {path: '', component: NewAdditionsRootPageComponent}
