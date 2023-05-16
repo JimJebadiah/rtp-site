@@ -22,11 +22,12 @@ import {
 import {ContactPageComponent} from "./views/contact-page/contact-page.component";
 import {NewsPageComponent} from "./views/news-page/news-page.component";
 import {ArticlePageComponent} from "./views/article-page/article-page.component";
+import {ConstructionPageComponent} from "./views/construction-page/construction-page.component";
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
   {path: ABOUT_PATH, component: AboutPageComponent},
-  {path: NEWS_PATH, component: NewsPageComponent},
+  {path: NEWS_PATH, component: ConstructionPageComponent},
   {path: ARTICLE_PATH, component: ArticlePageComponent},
   {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
