@@ -18,7 +18,11 @@ export class DownloadPageComponent extends AbstractPage implements OnInit {
     this.assetService.loadDownloads().subscribe((downloads) => {
       this.downloads = downloads;
       this.downloads = this.downloads.filter((obj) => obj.version !== TEMPLATE_VERSION);
-      this.downloads = this.downloads.sort(() => 1);
+      this.downloads = this.downloads.sort(this.downloadSort);
     });
+  }
+
+  downloadSort(a: DownloadObject, b: DownloadObject): number {
+    return a.version > b.version ? -1 : 1;
   }
 }

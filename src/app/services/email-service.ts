@@ -1,8 +1,6 @@
 import {Injectable} from "@angular/core";
-import {AssetService, Pinata} from "./asset-service";
-import {LangUtils} from "../lang-utils";
-import {Observable, of, Subject, throwError} from "rxjs";
-import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
+import {Observable, of, throwError} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
@@ -10,10 +8,17 @@ import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
 export class EmailService {
   constructor(private readonly http: HttpClient) { }
 
-  sendEmail(returnEmail: string, message: string, name: string, path: string): Observable<any> {
+  sendEmail(returnEmail: string, message: string, name: string): Observable<any> {
     if (returnEmail === '' || message === '' || name === '') {
       throw throwError(() => new BlankError('error'));
     }
+    const url: string = 'https://formspree.io/f/xeqwdvkv';
+    this.http.post(url, {
+      name: name,
+      email: returnEmail,
+      message: message,
+    }).subscribe();
+
     return of('nice');
   }
 }

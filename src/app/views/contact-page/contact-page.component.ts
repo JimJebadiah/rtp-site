@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AssetService} from "../../services/asset-service";
 import {AbstractPage} from "../abstract-page";
-import {BlankError, EmailService} from "../../services/email-service";
+import {EmailService} from "../../services/email-service";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {catchError, of} from "rxjs";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-contact-page',
@@ -27,8 +27,8 @@ export class ContactPageComponent extends AbstractPage implements OnInit {
 
   sendEmail() {
     try {
-      this.emailService.sendEmail(this.email, this.message, this.name, '').subscribe(
-        (next) => {
+      this.emailService.sendEmail(this.email, this.message, this.name).subscribe(
+        () => {
           this.openSnackBar('Email Sent Successfully!');
           this.contact = false;
           this.clearFields();
