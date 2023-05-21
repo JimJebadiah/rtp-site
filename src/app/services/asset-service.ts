@@ -63,7 +63,7 @@ export class AssetService {
   }
 
   loadAsset(path: string): Observable<Object> {
-    return this.http.get(path);
+    return this.http.post(path, {});
   }
 }
 
