@@ -8,7 +8,7 @@ import {
   HOME_PATH,
   NEW_ADDITIONS_PATH,
   NEWS_PATH, PINATA_PARAM, PINATA_PATH,
-  POLICY_PATH
+  POLICY_PATH, WIKI_PATH
 } from './services/routing-service';
 import {PrivacyPolicyPageComponent} from "./views/privacy-policy-page/privacy-policy-page.component";
 import {AboutPageComponent} from "./views/about-page/about-page.component";
@@ -23,6 +23,9 @@ import {ContactPageComponent} from "./views/contact-page/contact-page.component"
 import {NewsPageComponent} from "./views/news-page/news-page.component";
 import {ArticlePageComponent} from "./views/article-page/article-page.component";
 import {ConstructionPageComponent} from "./views/construction-page/construction-page.component";
+import {RedirectGuard} from "./redirect-guard";
+
+export const wikiUrl: string = "https://app.milanote.com/1Q0pqJ15Yc3b5t?p=x39xvv7sF3X"
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
@@ -36,6 +39,7 @@ const routes: Routes = [
     {path: `${PINATA_PATH}/:${PINATA_PARAM}`, component: PinataPageComponent},
     {path: '', component: NewAdditionsRootPageComponent}
   ]},
+  {path: WIKI_PATH, canActivate: [RedirectGuard], component: RedirectGuard, data: {externalUrl: wikiUrl}},
   {path: '', redirectTo: HOME_PATH, pathMatch: "full"},
   {path: '**', component: NotFoundPageComponent},
 ];
