@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import {
   ABOUT_PATH, ARTICLE_PATH,
-  CONTACT_PATH,
+  CONTACT_PATH, DISCORD_PATH,
   DOWNLOAD_PATH,
   HOME_PATH,
   NEW_ADDITIONS_PATH,
-  NEWS_PATH, PINATA_PARAM, PINATA_PATH,
+  NEWS_PATH, PATREON_PATH, PINATA_PARAM, PINATA_PATH,
   POLICY_PATH, WIKI_PATH
 } from './services/routing-service';
 import {PrivacyPolicyPageComponent} from "./views/privacy-policy-page/privacy-policy-page.component";
@@ -26,6 +26,8 @@ import {ConstructionPageComponent} from "./views/construction-page/construction-
 import {RedirectGuard} from "./redirect-guard";
 
 export const wikiUrl: string = "https://app.milanote.com/1Q0pqJ15Yc3b5t?p=x39xvv7sF3X"
+export const discordUrl: string = 'https://discord.gg/auwnJCavKb';
+export const patreonUrl: string = 'https://www.patreon.com/Return_To_Paradise';
 
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
@@ -40,6 +42,8 @@ const routes: Routes = [
     {path: '', component: NewAdditionsRootPageComponent}
   ]},
   {path: WIKI_PATH, canActivate: [RedirectGuard], component: RedirectGuard, data: {externalUrl: wikiUrl}},
+  {path: DISCORD_PATH, canActivate: [RedirectGuard], component: RedirectGuard, data: {externalUrl: discordUrl}},
+  {path: PATREON_PATH, canActivate: [RedirectGuard], component: RedirectGuard, data: {externalUrl: patreonUrl}},
   {path: '', redirectTo: HOME_PATH, pathMatch: "full"},
   {path: '**', component: NotFoundPageComponent},
 ];
