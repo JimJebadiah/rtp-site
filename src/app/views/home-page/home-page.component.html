@@ -8,6 +8,16 @@
     <div id="introduction">
       <div class="text-container">
           <p>The spiritual successor to the Viva Piñata franchise developed by fans for fans!</p>
+          <div class="button-container">
+            <button class="discord-button" mat-button (click)="goToDiscord()">
+              <img src="assets/images/discord.svg">
+              <span>Discord</span>
+            </button>
+            <button class="patreon-button" mat-button (click)="goToPatreon()">
+              <img src="assets/images/patreon.png">
+              <span>Patreon</span>
+            </button>
+          </div>
       </div>
     </div>
     <div id="gallery" [ngStyle]="{'background-image': backgroundCandy}">

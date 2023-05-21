@@ -41,6 +41,14 @@ export class RoutingService {
       this.navigateToPage(NOT_FOUND_PATH);
     }
 
+    navigateToDiscord() {
+      this.navigateToPage(DISCORD_PATH);
+    }
+
+    navigateToPatreon() {
+      this.navigateToPage(PATREON_PATH);
+    }
+
     navigateToPage(urlSegment: string, additionalSegments: ReadonlyArray<string> = []) {
         from(this.router.navigate([urlSegment, ...additionalSegments])).subscribe();
     }
@@ -55,7 +63,9 @@ export const DOWNLOAD_PATH = 'downloads';
 export const POLICY_PATH = 'privacy-policy';
 export const CONTACT_PATH = 'contact';
 export const NOT_FOUND_PATH = '404';
-export const WIKI_PATH = "wiki";
+export const WIKI_PATH = 'wiki';
+export const DISCORD_PATH = 'discord';
+export const PATREON_PATH = 'patreon'
 
 export const PINATA_PATH = 'pinata'
 
