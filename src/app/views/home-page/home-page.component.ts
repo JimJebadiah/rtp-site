@@ -25,12 +25,4 @@ export class HomePageComponent implements OnInit {
   goToDownloads() {
     this.routingSvc.navigateToDownloadsPage();
   }
-
-  goToDiscord() {
-    this.routingSvc.navigateToDiscord();
-  }
-
-  goToPatreon() {
-    this.routingSvc.navigateToPatreon();
-  }
 }
