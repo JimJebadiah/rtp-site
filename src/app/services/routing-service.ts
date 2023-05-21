@@ -55,6 +55,7 @@ export const DOWNLOAD_PATH = 'downloads';
 export const POLICY_PATH = 'privacy-policy';
 export const CONTACT_PATH = 'contact';
 export const NOT_FOUND_PATH = '404';
+export const WIKI_PATH = "wiki";
 
 export const PINATA_PATH = 'pinata'
 

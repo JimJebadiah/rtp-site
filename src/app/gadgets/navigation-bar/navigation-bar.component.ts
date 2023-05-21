@@ -6,7 +6,7 @@ import {
   NEW_ADDITIONS_PATH,
   NEWS_PATH,
   POLICY_PATH,
-  RoutingService,
+  RoutingService, WIKI_PATH,
 } from 'src/app/services/routing-service';
 
 @Component({
@@ -46,6 +46,10 @@ export class NavigationBarComponent {
       link: NEW_ADDITIONS_PATH,
       text: 'New Additions',
     },
+    {
+      link: WIKI_PATH,
+      text: 'Wiki',
+    }
   ];
 
   navigateHome() {
