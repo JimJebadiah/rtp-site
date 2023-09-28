@@ -49,6 +49,10 @@ export class RoutingService {
       this.navigateToPage(PATREON_PATH);
     }
 
+    navigateToXbox() {
+      this.navigateToPage(XBOX_PATH);
+    }
+
     navigateToPage(urlSegment: string, additionalSegments: ReadonlyArray<string> = []) {
         from(this.router.navigate([urlSegment, ...additionalSegments])).subscribe();
     }
@@ -65,8 +69,9 @@ export const CONTACT_PATH = 'contact';
 export const NOT_FOUND_PATH = '404';
 export const WIKI_PATH = 'wiki';
 export const DISCORD_PATH = 'discord';
-export const PATREON_PATH = 'patreon'
+export const PATREON_PATH = 'patreon';
+export const XBOX_PATH = 'xbox';
 
-export const PINATA_PATH = 'pinata'
+export const PINATA_PATH = 'pinata';
 
-export const PINATA_PARAM = 'pinataName'
+export const PINATA_PARAM = 'pinataName';

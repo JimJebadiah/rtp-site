@@ -2,6 +2,7 @@
 
 .button-container {
   display: flex;
+  flex-direction: column;
   gap: 24px;
   margin-top: 100px;
   justify-content: center;
@@ -20,7 +21,7 @@
     width: 256px;
 
     @media screen and (max-width: @mobile-max-width) {
-      height: 40px;
+      height: 64px;
       font-size: 20px;
       width: 50%;
     }
@@ -30,6 +31,12 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+
+      @media screen and (max-width: @mobile-max-width) {
+        span {
+          flex-grow: 1;
+        }
+      }
 
       img {
         width: 48px;
@@ -45,11 +52,57 @@
     }
   }
 
+  .social-buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    button {
+      width: 256px;
+
+      @media screen and (max-width: @mobile-max-width) {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: @mobile-max-width) {
+      flex-direction: column;
+      gap: 12px;
+      width: 60%;
+      align-items: center;
+    }
+  }
+
+  .rules-buttons {
+    button {
+      width: 536px;
+
+      span {
+        width: 100%;
+        text-align: center;
+      }
+
+      @media screen and (max-width: @mobile-max-width) {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: @mobile-max-width) {
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+    }
+  }
+
   .discord-button {
     background-color: #5865F2;
   }
 
   .patreon-button {
     background-color: #FF424D;
+  }
+
+  .xbox-button {
+    background-color: #0e7a0d;
   }
 }

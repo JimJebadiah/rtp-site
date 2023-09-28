@@ -1,10 +1,17 @@
 <div class="button-container">
-  <button class="discord-button" mat-button (click)="goToDiscord()">
-    <img src="assets/images/discord.svg">
-    <span>Discord</span>
-  </button>
-  <button class="patreon-button" mat-button (click)="goToPatreon()">
-    <img src="assets/images/patreon.png">
-    <span>Patreon</span>
-  </button>
+  <div class="social-buttons">
+    <button class="discord-button" mat-button (click)="goToDiscord()">
+      <img src="assets/images/discord.svg">
+      <span>Discord</span>
+    </button>
+    <button class="patreon-button" mat-button (click)="goToPatreon()">
+      <img src="assets/images/patreon.png">
+      <span>Patreon</span>
+    </button>
+  </div>
+  <div class="rules-buttons">
+    <button class="xbox-button" mat-button (click)="goToXbox()">
+      <span>Xbox Game Content Usage Rules</span>
+    </button>
+  </div>
 </div>

@@ -4,6 +4,7 @@ import {AssetService} from "../../services/asset-service";
 import {ActivatedRoute} from "@angular/router";
 import {Article, IMAGE_DELIM, NewsService, VIDEO_DELIM} from "../../services/news-service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import {LangUtils} from "../../lang-utils";
 
 @Component({
   selector: 'app-article-page',
@@ -30,8 +31,10 @@ export class ArticlePageComponent extends AbstractPage implements OnInit{
     });
   }
 
-  isImage(text: string): boolean {
-    return text.includes(IMAGE_DELIM);
+  isImage(text: string | undefined): boolean {
+    if (!LangUtils.exists(text)) return false;
+    const p = text as string;
+    return p.includes(IMAGE_DELIM);
   }
 
   extractSourceImage(text: string): string {

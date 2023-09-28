@@ -17,4 +17,8 @@ export class SocialButtonsComponent {
   goToPatreon() {
     this.routingSvc.navigateToPatreon();
   }
+
+  goToXbox() {
+    this.routingSvc.navigateToXbox();
+  }
 }

@@ -3,6 +3,7 @@
   "title": "Sample Article",
   "date": "5/15/23",
   "textContent": [
+    "Intro text",
     "<IMAGE> : /assets/images/gallery/train.png",
     "This is a paragraph",
     "This is the next paragraph",

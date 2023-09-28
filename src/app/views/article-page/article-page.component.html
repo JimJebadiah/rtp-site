@@ -1,20 +1,28 @@
-<div id="article-container" [ngStyle]="{'background-image': backgroundImage}">
+<div id="article-container" [ngStyle]="{'background-image': backgroundImage}" xmlns="http://www.w3.org/1999/html">
   <div class="text-container">
     <div class="text-modal modal">
+      <span class="title-container">
+        <h1>{{article?.title}}</h1>
+        <h3>{{article?.date}}</h3>
+      </span>
+      <div class="break" style="margin-top: -20px;"></div>
       <ng-container *ngFor="let text of article?.textContent">
         <ng-container *ngIf="isImage(text); else second">
+          <div class="break"></div>
           <img src="{{extractSourceImage(text)}}">
+          <div class="break"></div>
         </ng-container>
         <ng-template #second>
           <ng-container *ngIf="isVideo(text); else third">
+            <div class="break"></div>
             <iframe
               [src]="extractSourceVideo(text)"
-              width="560"
-              height="315"
               title="YouTube video player"
               frameborder="0"
+              height="1200px"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
             </iframe>
+            <div class="break"></div>
           </ng-container>
         </ng-template>
         <ng-template #third>
