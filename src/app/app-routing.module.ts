@@ -33,7 +33,7 @@ export const xboxUrl: string = 'https://www.xbox.com/en-US/developers/rules';
 const routes: Routes = [
   {path: HOME_PATH, component: HomePageComponent},
   {path: ABOUT_PATH, component: AboutPageComponent},
-  {path: NEWS_PATH, component: NewsPageComponent},
+  {path: NEWS_PATH, component: ConstructionPageComponent},
   {path: ARTICLE_PATH, component: ArticlePageComponent},
   {path: DOWNLOAD_PATH, component: DownloadPageComponent},
   {path: POLICY_PATH, component: PrivacyPolicyPageComponent},
