@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
 
+## Setup
+Download the latest version of Node.js. In the `rtp-site` folder from the terminal run `npm install` 
+to install the project dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -17,6 +21,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Deploying to GH-Pages
+*NOTE* do not edit the site branch, that is where pages is pulling the site from
+
+run `ng deploy --base-href=/rtp-site/` to deploy to pages
 
 ## Running end-to-end tests
 
