@@ -5,6 +5,8 @@
     {"version":  "0.0.4", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/17z-ZCBYFadh9G-VZYsV4ajFDVrBfcjxf/view"}]},
     {"version":  "0.0.5", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1gjYDPdZ_B8htK7lxrygtr7e14YMhgPs2/view"}]},
     {"version":  "0.0.6", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1kvl9IJ4WZnX1uS_034PPaHc_3ffTpXIk/view"}]},
-    {"version":  "0.0.7", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1xwAGL4xeKn7Y6R7ojhTLYNiiQp6D6x9k/view"}, {"platform":  "Android", "link":  ""}]}
+    {"version":  "0.0.7", "platforms": [{"platform": "Windows", "link": "https://drive.google.com/file/d/1xwAGL4xeKn7Y6R7ojhTLYNiiQp6D6x9k/view"}, {"platform":  "Android", "link":  ""}]},
+    {"version":  "0.0.8", "platforms":  [{"platform":  "Windows", "link":  "https://drive.google.com/file/d/1BhRzJe5pVxM352gzKaikE9rrGo7C9MhY/view"}]},
+    {"version":  "0.0.9", "platforms":  [{"platform":  "Windows", "link":  "https://drive.google.com/file/d/1cVnxqTitxXfNcj0Vazx-kW3FBDI35lQ0/view"}]}
   ]
 }
